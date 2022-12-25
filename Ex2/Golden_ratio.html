@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" > 
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="Golden_ratio.js"></script>
+		
+		
+        <title> Golden Ratio Calculator</title>
+    </head>
+    
+    <body>
+		<!-- radio button -->
+        <div class="container-fluids">
+            <form style="margin-top: 1em;">
+                <div id="radioset">
+                    <a><b>&emsp;Mode:&emsp;</b></a> 
+						<input type="radio" name="Mode" value="light"><label style="margin-right: 1em;">Light</label>
+						<input type="radio" name="Mode" value="dark"><label>Dark</label>
+                </div>
+            </form>
+        </div>
+
+		<!-- Title and image -->
+        <div class="container">
+            <div class="text-center mt-5">
+               <h5>Assignment 2: Gold Ratio calculator</h5>
+                <img src="Golden_ratio.jpg" alt="pexels">
+            </div>
+        </div>
+        
+      
+	  <!-- Changing the display type -->
+      <script>
+      $("input[name='Mode']").change(function() {
+        if ($(this).val() === "dark") {
+          $("body").addClass("dark-bg");
+          $("#box").css("background-color","#432211")
+          $("#calc").css("color","#fff");
+        }
+        else {
+          $("body").removeClass("dark-bg");
+          $("#box").css("background-color","rgb(251, 229, 201)");
+          $("#calc").css("color","#000");
+        }
+      });
+      </script>
+	  
+	  <!-- The box that calculates the golden ratio  -->
+    <main class="container mt-5 p-3 align-center">
+	  <section>
+      <div class="container" >
+        <div class="row" style="height:30%; width:100%">
+          <div class="col-3 form-inline" id="box" style="height:100%; width:100%; box-sizing:content-box; border:1px ;border-color:rgb(247, 145, 145); border-style:solid; background-color: rgb(251, 229, 201); padding:20px; border-radius:4%;">
+            <p>Enter a number to calculate its golden ratio:</p>
+            <label>a =&emsp; <input type="number" placeholder="number..." id="input1" onblur="rectangle_A()" onclick="rectangle_A()"></label>
+            <label class="mt-3">b =&emsp;<input type="number" placeholder="number..." id="input2" onblur="rectangle_B()" onclick="rectangle_B()"></label>
+            <label>a+b =<input style="border:none; background-color:transparent;" id="calc" class="form-control" readonly></label>
+          </div>
+
+      <!-- The rectangle -->
+				  <div class="col-3" id="goldenRatio" style="display:flex; min-height:250px; height:auto; width:100%;" >
+					  <div id="error"></div>
+						  <canvas id="canvas1" height="0" width="0" style="border:0px solid black; background-color:rgb(151, 207, 242);"></canvas>
+						  <canvas id="canvas2" height="0" width="0" style="border:0px solid black; background-color:rgb(247, 213, 170)"></canvas>
+				  </div>
+			  </div>
+		  </div>
+    </section>
+  </main>
+
+</body>
+</html>

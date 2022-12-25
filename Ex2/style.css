@@ -1,0 +1,16 @@
+img {
+    max-width: 25%;
+    max-height: 25%;
+    margin: auto;
+}
+
+.dark-bg {
+    background-color: #000;
+    color: #fff;
+}
+    
+.dark-bg input[type="radio"] {
+    background-color: #000;
+    color: #fff;
+      
+} 
