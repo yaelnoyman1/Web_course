@@ -1,0 +1,36 @@
+In order to run the project locally, several steps must be taken.
+
+- run npm i
+
+- Edit the .env file:
+  1.Add the database uri(CONNECTION STRING)
+    example: "mongodb+srv://yael:yael@cluster0.jx7gw.mongodb.net/test://localhost:27017"
+  2.add the local address of the client side (index.js)
+    example: 'http://127.0.0.1:5500' 
+
+- If your database is empty
+  Run the following command once  
+  node src/db/load-db.js    
+
+- Edit the index.js file in line 7, you must insert there the port number that the server uses.
+
+- Run the index.html file on a *live-server or another way 
+
+- If you use visual studio code there is a folder with launch.json and you can run the server using the debugger
+  Another way is to run the server.js file using node 
+  example: node src/server.js 
+  
+- If you don't see the file .env and .vscode then allow the system to see hidden files.
+
+
+
+---------------------------------------------------
+
+* Note that each command should be write in the correct path for the project
+
+* The project was built that the client side runs on a separate port from the server.
+  A live server is a convenient option to run a client side locally
+
+
+
+
