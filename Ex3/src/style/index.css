@@ -1,0 +1,54 @@
+html,
+body {
+    background-color: rgb(223, 223, 223);
+}
+
+.mainPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    margin-top: 4%;
+}
+
+.moma {
+    font-size: 50px;
+}
+
+.searchContainer {
+    margin-top: 2%;
+    width: 40%;
+    padding: 2%;
+    background-color: rgb(208, 205, 202);
+    border-radius: 1%;
+    height: 320px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #00000016;
+}
+
+.inputTextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+input {
+    width: 100%;
+}
+
+.searchResult {
+    margin-left: 10%;
+    width: 80%;
+    font-size: small;
+}
